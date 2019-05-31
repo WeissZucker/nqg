@@ -411,8 +411,10 @@ class QATrainer(object):
         if not os.path.exists(self.save_dir):
             os.makedirs(self.save_dir)
         # read data-set and prepare iterator
+        print("Load train and dev data...")
         self.train_loader = self.get_data_loader("./squad/train-v1.1.json")
         self.dev_loader = self.get_data_loader("./squad/dev-v1.1.json")
+        print("Loading finished.")
 
         num_train_optimization_steps = len(self.train_loader) * config.num_epochs
         # optimizer
@@ -479,6 +481,7 @@ class QATrainer(object):
         best_loss = 1e10
         qa_loss_lst = []
         self.model.train()
+        print("Start training model...")
         for epoch in range(1, 4):
             start = time.time()
             for step, batch in enumerate(self.train_loader, start=1):
