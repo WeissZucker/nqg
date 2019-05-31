@@ -158,7 +158,7 @@ class QGTrainer(object):
         train_dir = os.path.join("./save", "c2q")
 
         self.train_loader = self.get_data_loader("./squad/train-v1.1.json")
-        self.dev_loader = self.get_data_loader("./squad/new_dev-v1.1.json")
+        self.dev_loader = self.get_data_loader("./squad/dev-v1.1.json")
 
         self.model_dir = os.path.join(train_dir, "train_%d" % int(time.strftime("%m%d%H%M%S")))
         if not os.path.exists(self.model_dir):
@@ -299,7 +299,7 @@ class C2ATrainer(object):
         self.model = AnswerSelector(config.dropout).to(config.device)
         train_dir = os.path.join("./save", "c2a")
         self.train_loader = self.get_data_loader("./squad/train-v1.1.json")
-        self.dev_loader = self.get_data_loader("./squad/new_dev-v1.1.json")
+        self.dev_loader = self.get_data_loader("./squad/dev-v1.1.json")
         self.model_dir = os.path.join(train_dir, "train_%d" % int(time.strftime("%m%d%H%M%S")))
         if not os.path.exists(self.model_dir):
             os.makedirs(self.model_dir)
@@ -412,7 +412,7 @@ class QATrainer(object):
             os.makedirs(self.save_dir)
         # read data-set and prepare iterator
         self.train_loader = self.get_data_loader("./squad/train-v1.1.json")
-        self.dev_loader = self.get_data_loader("./squad/new_dev-v1.1.json")
+        self.dev_loader = self.get_data_loader("./squad/dev-v1.1.json")
 
         num_train_optimization_steps = len(self.train_loader) * config.num_epochs
         # optimizer
@@ -546,7 +546,7 @@ class DualTrainer(object):
         self.save_dir = os.path.join(train_dir, "train_%d" % int(time.strftime("%m%d%H%M%S")))
         # read data-set and prepare iterator
         self.train_loader = self.get_data_loader("./squad/train-v1.1.json")
-        self.dev_loader = self.get_data_loader("./squad/new_dev-v1.1.json")
+        self.dev_loader = self.get_data_loader("./squad/dev-v1.1.json")
 
         num_train_optimization_steps = len(self.train_loader) * config.num_epochs
         # optimizer
