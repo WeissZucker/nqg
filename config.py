@@ -30,6 +30,7 @@ max_query_len = 64
 num_layers = 2
 hidden_size = 300
 embedding_size = 768
+reduce_size = False
 
 # QA config
 qa_lr = 5e-5
