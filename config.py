@@ -40,7 +40,7 @@ dual_lambda = 0.1
 
 
 lr = 0.1
-batch_size = 8
+batch_size = 64
 dropout = 0.3
 max_grad_norm = 5.0
 
