@@ -8,6 +8,7 @@ This code is written in Python. Dependencies include
 * pytorch >= 1.0
 * nltk
 * tqdm
+* pytorch_pretrained_bert
 * [pytorch_scatter](https://github.com/rusty1s/pytorch_scatter)
 
 ## Download data and Preprocess
