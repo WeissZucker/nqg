@@ -23,13 +23,13 @@ use_gpu = True
 debug = False
 vocab_size = 30522
 
-num_epochs = 4
+num_epochs = 1
 max_length = 400
 max_seq_len = 384
 max_query_len = 64
 num_layers = 2
 hidden_size = 300
-embedding_size = 768
+embedding_size = 300
 reduce_size = False
 
 # QA config
