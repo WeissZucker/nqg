@@ -23,7 +23,7 @@ use_gpu = True
 debug = False
 vocab_size = 45000
 
-num_epochs = 10
+num_epochs = 4
 max_length = 400
 max_seq_len = 384
 max_query_len = 64
