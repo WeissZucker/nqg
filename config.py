@@ -21,7 +21,7 @@ train = True
 device = "cuda:0"
 use_gpu = True
 debug = False
-vocab_size = 45000
+vocab_size = 30522
 
 num_epochs = 4
 max_length = 400
